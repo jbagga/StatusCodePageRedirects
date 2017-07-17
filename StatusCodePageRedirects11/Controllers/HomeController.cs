@@ -8,11 +8,15 @@ namespace StatusCodePageRedirects11.Controllers
 {
     public class HomeController : Controller
     {
+        [Route("")]
+        [Route("Home")]
+        [Route("Home/Index")]
         public IActionResult Index()
         {
             return View();
         }
 
+        [Route("Home/About")]
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
@@ -20,6 +24,7 @@ namespace StatusCodePageRedirects11.Controllers
             return View();
         }
 
+        [Route("Home/Contact")]
         public IActionResult Contact()
         {
             ViewData["Message"] = "Your contact page.";
